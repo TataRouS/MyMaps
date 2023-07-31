@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8CEEE1C12A6BDD65003E1BBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEE1C02A6BDD65003E1BBB /* AppDelegate.swift */; };
 		8CEEE1C32A6BDD65003E1BBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEE1C22A6BDD65003E1BBB /* SceneDelegate.swift */; };
-		8CEEE1C52A6BDD65003E1BBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEE1C42A6BDD65003E1BBB /* ViewController.swift */; };
 		8CEEE1C82A6BDD65003E1BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEE1C62A6BDD65003E1BBB /* Main.storyboard */; };
 		8CEEE1CA2A6BDD66003E1BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEE1C92A6BDD66003E1BBB /* Assets.xcassets */; };
 		8CEEE1CD2A6BDD66003E1BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEE1CB2A6BDD66003E1BBB /* LaunchScreen.storyboard */; };
@@ -21,6 +20,10 @@
 		8CEEE1F62A6BE1D6003E1BBB /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEEE1F52A6BE1D6003E1BBB /* GoogleMapsCore */; };
 		8CEEE1F82A6BE1D6003E1BBB /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEEE1F72A6BE1D6003E1BBB /* GoogleMapsM4B */; };
 		8CEEE1FA2A6BE1D6003E1BBB /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEEE1F92A6BE1D6003E1BBB /* GooglePlaces */; };
+		BD3ECB882A77DF0D00796162 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB872A77DF0D00796162 /* Realm */; };
+		BD3ECB8A2A77DF0D00796162 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB892A77DF0D00796162 /* RealmSwift */; };
+		BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8B2A77DF7800796162 /* MapViewController.swift */; };
+		BD3ECB8E2A77DFB300796162 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		8CEEE1BD2A6BDD65003E1BBB /* MyMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEEE1C02A6BDD65003E1BBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CEEE1C22A6BDD65003E1BBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CEEE1C42A6BDD65003E1BBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8CEEE1C72A6BDD65003E1BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CEEE1C92A6BDD66003E1BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CEEE1CC2A6BDD66003E1BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		8CEEE1DD2A6BDD66003E1BBB /* MyMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEEE1E12A6BDD66003E1BBB /* MyMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapsUITests.swift; sourceTree = "<group>"; };
 		8CEEE1E32A6BDD66003E1BBB /* MyMapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD3ECB8B2A77DF7800796162 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3ECB882A77DF0D00796162 /* Realm in Frameworks */,
 				8CEEE1F22A6BE1D6003E1BBB /* GoogleMaps in Frameworks */,
+				BD3ECB8A2A77DF0D00796162 /* RealmSwift in Frameworks */,
 				8CEEE1F62A6BE1D6003E1BBB /* GoogleMapsCore in Frameworks */,
 				8CEEE1F82A6BE1D6003E1BBB /* GoogleMapsM4B in Frameworks */,
 				8CEEE1FA2A6BE1D6003E1BBB /* GooglePlaces in Frameworks */,
@@ -111,7 +117,8 @@
 			children = (
 				8CEEE1C02A6BDD65003E1BBB /* AppDelegate.swift */,
 				8CEEE1C22A6BDD65003E1BBB /* SceneDelegate.swift */,
-				8CEEE1C42A6BDD65003E1BBB /* ViewController.swift */,
+				BD3ECB8B2A77DF7800796162 /* MapViewController.swift */,
+				BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */,
 				8CEEE1C62A6BDD65003E1BBB /* Main.storyboard */,
 				8CEEE1C92A6BDD66003E1BBB /* Assets.xcassets */,
 				8CEEE1CB2A6BDD66003E1BBB /* LaunchScreen.storyboard */,
@@ -159,6 +166,8 @@
 				8CEEE1F52A6BE1D6003E1BBB /* GoogleMapsCore */,
 				8CEEE1F72A6BE1D6003E1BBB /* GoogleMapsM4B */,
 				8CEEE1F92A6BE1D6003E1BBB /* GooglePlaces */,
+				BD3ECB872A77DF0D00796162 /* Realm */,
+				BD3ECB892A77DF0D00796162 /* RealmSwift */,
 			);
 			productName = GB_Map;
 			productReference = 8CEEE1BD2A6BDD65003E1BBB /* MyMaps.app */;
@@ -234,6 +243,7 @@
 			mainGroup = 8CEEE1B42A6BDD65003E1BBB;
 			packageReferences = (
 				8CEEE1F02A6BE1D6003E1BBB /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
+				BD3ECB862A77DF0D00796162 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 8CEEE1BE2A6BDD65003E1BBB /* Products */;
 			projectDirPath = "";
@@ -278,9 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CEEE1C52A6BDD65003E1BBB /* ViewController.swift in Sources */,
 				8CEEE1C12A6BDD65003E1BBB /* AppDelegate.swift in Sources */,
+				BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */,
 				8CEEE1C32A6BDD65003E1BBB /* SceneDelegate.swift in Sources */,
+				BD3ECB8E2A77DFB300796162 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +639,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		BD3ECB862A77DF0D00796162 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +674,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8CEEE1F02A6BE1D6003E1BBB /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
 			productName = GooglePlaces;
+		};
+		BD3ECB872A77DF0D00796162 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD3ECB862A77DF0D00796162 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BD3ECB892A77DF0D00796162 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD3ECB862A77DF0D00796162 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
