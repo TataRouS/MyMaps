@@ -20,6 +20,10 @@
 		8CEEE1F62A6BE1D6003E1BBB /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEEE1F52A6BE1D6003E1BBB /* GoogleMapsCore */; };
 		8CEEE1F82A6BE1D6003E1BBB /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEEE1F72A6BE1D6003E1BBB /* GoogleMapsM4B */; };
 		8CEEE1FA2A6BE1D6003E1BBB /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 8CEEE1F92A6BE1D6003E1BBB /* GooglePlaces */; };
+		BD10C9172A77E30D0034025F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9162A77E30D0034025F /* Location.swift */; };
+		BD10C9192A77E3270034025F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9182A77E3270034025F /* RealmService.swift */; };
+		BD10C91A2A77E4260034025F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9182A77E3270034025F /* RealmService.swift */; };
+		BD10C91B2A77E4270034025F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9182A77E3270034025F /* RealmService.swift */; };
 		BD3ECB882A77DF0D00796162 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB872A77DF0D00796162 /* Realm */; };
 		BD3ECB8A2A77DF0D00796162 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB892A77DF0D00796162 /* RealmSwift */; };
 		BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8B2A77DF7800796162 /* MapViewController.swift */; };
@@ -56,6 +60,8 @@
 		8CEEE1DD2A6BDD66003E1BBB /* MyMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEEE1E12A6BDD66003E1BBB /* MyMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapsUITests.swift; sourceTree = "<group>"; };
 		8CEEE1E32A6BDD66003E1BBB /* MyMapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD10C9162A77E30D0034025F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BD10C9182A77E3270034025F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		BD3ECB8B2A77DF7800796162 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,14 +121,15 @@
 		8CEEE1BF2A6BDD65003E1BBB /* MyMaps */ = {
 			isa = PBXGroup;
 			children = (
+				8CEEE1CE2A6BDD66003E1BBB /* Info.plist */,
 				8CEEE1C02A6BDD65003E1BBB /* AppDelegate.swift */,
 				8CEEE1C22A6BDD65003E1BBB /* SceneDelegate.swift */,
 				BD3ECB8B2A77DF7800796162 /* MapViewController.swift */,
 				BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */,
+				BD10C9152A77E2F90034025F /* Realm */,
 				8CEEE1C62A6BDD65003E1BBB /* Main.storyboard */,
 				8CEEE1C92A6BDD66003E1BBB /* Assets.xcassets */,
 				8CEEE1CB2A6BDD66003E1BBB /* LaunchScreen.storyboard */,
-				8CEEE1CE2A6BDD66003E1BBB /* Info.plist */,
 			);
 			path = MyMaps;
 			sourceTree = "<group>";
@@ -142,6 +149,15 @@
 				8CEEE1E32A6BDD66003E1BBB /* MyMapsUITestsLaunchTests.swift */,
 			);
 			path = MyMapsUITests;
+			sourceTree = "<group>";
+		};
+		BD10C9152A77E2F90034025F /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C9162A77E30D0034025F /* Location.swift */,
+				BD10C9182A77E3270034025F /* RealmService.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEEE1C12A6BDD65003E1BBB /* AppDelegate.swift in Sources */,
+				BD10C9192A77E3270034025F /* RealmService.swift in Sources */,
 				BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */,
+				BD10C9172A77E30D0034025F /* Location.swift in Sources */,
 				8CEEE1C32A6BDD65003E1BBB /* SceneDelegate.swift in Sources */,
 				BD3ECB8E2A77DFB300796162 /* MapViewModel.swift in Sources */,
 			);
@@ -300,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEEE1D82A6BDD66003E1BBB /* MyMapsTests.swift in Sources */,
+				BD10C91A2A77E4260034025F /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEEE1E42A6BDD66003E1BBB /* MyMapsUITestsLaunchTests.swift in Sources */,
+				BD10C91B2A77E4270034025F /* RealmService.swift in Sources */,
 				8CEEE1E22A6BDD66003E1BBB /* MyMapsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GB_Map/Info.plist;
+				INFOPLIST_FILE = MyMaps/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "для примера";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -497,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GB_Map/Info.plist;
+				INFOPLIST_FILE = MyMaps/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "для примера";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
