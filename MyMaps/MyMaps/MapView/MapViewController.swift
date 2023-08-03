@@ -4,6 +4,12 @@
 //
 //  Created by Nata Kuznetsova on 31.07.2023.
 //
+//
+//  MapViewController.swift
+//  GBMap
+//
+//  Created by Павел Заруцков on 11.06.2022.
+//
 
 import UIKit
 import GoogleMaps
@@ -13,15 +19,12 @@ class MapViewController: UIViewController {
     
     // MARK: - Propesties
     
+    var mapView: GMSMapView!
+    var viewModel: MapViewModel?
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
     var currentLocation = CLLocationCoordinate2D(latitude: 59.939095, longitude: 30.315868)
     var locationManager: CLLocationManager?
-    
-    // MARK: - Outlets
-    
-    @IBOutlet weak var mapView: GMSMapView!
-    
     
     // MARK: - Life cycle
     
@@ -31,10 +34,36 @@ class MapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupViews()
+        setupConstraints()
         createNavBarButton()
         configureLocationManager()
-        setupCamera(location: currentLocation)
         updateCurrentLocation()
+        setupCamera(location: currentLocation)
+    }
+    
+    // MARK: - Configure View
+    
+    private func setupConstraints() {
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            mapView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            mapView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            mapView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            mapView.heightAnchor.constraint(equalTo: view.heightAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func setupViews() {
+        mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+        view.addSubview(mapView)
+    }
+    
+    // MARK: - ConfigureViewModel
+    
+    func configure(viewModel: MapViewModel) {
+        self.viewModel = viewModel
     }
     
     // MARK: - Configure route
@@ -156,7 +185,7 @@ extension MapViewController {
     }
     
     private func setupCamera(location: CLLocationCoordinate2D) {
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom:14)
+        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom:10)
     }
     
     private func updateCamera(location: CLLocationCoordinate2D) {
