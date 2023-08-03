@@ -24,6 +24,9 @@
 		BD10C9192A77E3270034025F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9182A77E3270034025F /* RealmService.swift */; };
 		BD10C91A2A77E4260034025F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9182A77E3270034025F /* RealmService.swift */; };
 		BD10C91B2A77E4270034025F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9182A77E3270034025F /* RealmService.swift */; };
+		BD10C9202A7BC02E0034025F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C91F2A7BC02E0034025F /* LoginViewController.swift */; };
+		BD10C9222A7BC07B0034025F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9212A7BC07B0034025F /* User.swift */; };
+		BD10C9252A7BC0BA0034025F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9242A7BC0BA0034025F /* Router.swift */; };
 		BD3ECB882A77DF0D00796162 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB872A77DF0D00796162 /* Realm */; };
 		BD3ECB8A2A77DF0D00796162 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB892A77DF0D00796162 /* RealmSwift */; };
 		BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8B2A77DF7800796162 /* MapViewController.swift */; };
@@ -62,6 +65,9 @@
 		8CEEE1E32A6BDD66003E1BBB /* MyMapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD10C9162A77E30D0034025F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BD10C9182A77E3270034025F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		BD10C91F2A7BC02E0034025F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BD10C9212A7BC07B0034025F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD10C9242A7BC0BA0034025F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BD3ECB8B2A77DF7800796162 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,9 +130,10 @@
 				8CEEE1CE2A6BDD66003E1BBB /* Info.plist */,
 				8CEEE1C02A6BDD65003E1BBB /* AppDelegate.swift */,
 				8CEEE1C22A6BDD65003E1BBB /* SceneDelegate.swift */,
-				BD3ECB8B2A77DF7800796162 /* MapViewController.swift */,
-				BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */,
+				BD10C91D2A7BBFA60034025F /* LoginView */,
+				BD10C91E2A7BC00A0034025F /* MapView */,
 				BD10C9152A77E2F90034025F /* Realm */,
+				BD10C9232A7BC09D0034025F /* Router */,
 				8CEEE1C62A6BDD65003E1BBB /* Main.storyboard */,
 				8CEEE1C92A6BDD66003E1BBB /* Assets.xcassets */,
 				8CEEE1CB2A6BDD66003E1BBB /* LaunchScreen.storyboard */,
@@ -156,8 +163,34 @@
 			children = (
 				BD10C9162A77E30D0034025F /* Location.swift */,
 				BD10C9182A77E3270034025F /* RealmService.swift */,
+				BD10C9212A7BC07B0034025F /* User.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		BD10C91D2A7BBFA60034025F /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C91F2A7BC02E0034025F /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		BD10C91E2A7BC00A0034025F /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				BD3ECB8B2A77DF7800796162 /* MapViewController.swift */,
+				BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		BD10C9232A7BC09D0034025F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C9242A7BC0BA0034025F /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD10C9202A7BC02E0034025F /* LoginViewController.swift in Sources */,
 				8CEEE1C12A6BDD65003E1BBB /* AppDelegate.swift in Sources */,
 				BD10C9192A77E3270034025F /* RealmService.swift in Sources */,
 				BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */,
+				BD10C9252A7BC0BA0034025F /* Router.swift in Sources */,
+				BD10C9222A7BC07B0034025F /* User.swift in Sources */,
 				BD10C9172A77E30D0034025F /* Location.swift in Sources */,
 				8CEEE1C32A6BDD65003E1BBB /* SceneDelegate.swift in Sources */,
 				BD3ECB8E2A77DFB300796162 /* MapViewModel.swift in Sources */,
