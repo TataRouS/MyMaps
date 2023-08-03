@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Карта-->
+    <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMaps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="MyMaps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,10 +24,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jPm-PP-0h9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B8Q-it-nsQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jPm-PP-0h9" secondAttribute="bottom" id="XPz-fa-n70"/>
-                            <constraint firstItem="jPm-PP-0h9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pgP-0S-x8a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jPm-PP-0h9" secondAttribute="trailing" id="wnm-TN-UHf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TXG-ra-gEM" secondAttribute="trailing" id="8yw-MQ-oBy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TXG-ra-gEM" secondAttribute="bottom" id="Qj5-Ru-7Ic"/>
+                            <constraint firstItem="TXG-ra-gEM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cMg-uG-3eb"/>
+                            <constraint firstItem="TXG-ra-gEM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dN7-rc-qzm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Карта" id="e3R-5d-Cfu">
