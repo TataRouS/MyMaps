@@ -83,7 +83,7 @@ final class RealmService {
             return false
         }
     }
-
+    
     func authorization(login: String, password: String) -> Bool {
         do {
             let realm = try Realm(configuration: configuration)
@@ -102,4 +102,7 @@ final class RealmService {
             return false
         }
     }
+    
 }
+
+
