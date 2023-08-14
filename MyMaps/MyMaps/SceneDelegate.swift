@@ -23,11 +23,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-      
+        
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.5) {
+                self.window?.alpha = 1
+            }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-       
+        
+        DispatchQueue.main.async {
+                 UIView.animate(withDuration: 0.5) {
+                     self.window?.alpha = 0.2
+                 }
+             }
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {

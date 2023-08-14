@@ -16,7 +16,7 @@ import GoogleMaps
 import CoreLocation
 
 class MapViewController: UIViewController {
-    
+
     // MARK: - Propesties
     
     var mapView: GMSMapView!
@@ -25,13 +25,13 @@ class MapViewController: UIViewController {
     var routePath: GMSMutablePath?
     var currentLocation = CLLocationCoordinate2D(latitude: 59.939095, longitude: 30.315868)
     var locationManager: CLLocationManager?
-    
+
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupViews()
@@ -41,7 +41,7 @@ class MapViewController: UIViewController {
         updateCurrentLocation()
         setupCamera(location: currentLocation)
     }
-    
+
     // MARK: - Configure View
     
     private func setupConstraints() {
@@ -54,18 +54,18 @@ class MapViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(constraints)
     }
-    
+
     private func setupViews() {
         mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         view.addSubview(mapView)
     }
-    
+
     // MARK: - ConfigureViewModel
     
     func configure(viewModel: MapViewModel) {
         self.viewModel = viewModel
     }
-    
+
     // MARK: - Configure route
     
     private func setupRoute() {
@@ -77,29 +77,29 @@ class MapViewController: UIViewController {
         routePath = GMSMutablePath()
         route?.map = mapView
     }
-    
+
     private func removeRoute() {
         route?.map = nil
         routePath?.removeAllCoordinates()
     }
-    
+
     // MARK: - Create navigationBar button
     
     private func createNavBarButton() {
         let updateButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(updateButtonTapped))
         let loadButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(loadButtonTapped))
-        
+
         let playButton = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonTapped))
         let stopButton = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped))
-        
+
         navigationItem.rightBarButtonItems = [updateButton, loadButton]
         navigationItem.leftBarButtonItems = [playButton, stopButton]
     }
-    
+
     @objc func updateButtonTapped(sender: UIButton) {
         updateCurrentLocation()
     }
-    
+
     @objc func loadButtonTapped(sender: UIButton) {
         let newRoute = GMSPolyline()
         let newPath = GMSMutablePath()
@@ -117,12 +117,12 @@ class MapViewController: UIViewController {
         let bounds = GMSCoordinateBounds(path: newPath)
         mapView.animate(with: GMSCameraUpdate.fit(bounds))
     }
-    
+
     @objc func playButtonTapped(sender: UIButton) {
         setupRoute()
         locationManager?.startUpdatingLocation()
     }
-    
+
     @objc func stopButtonTapped(sender: UIButton) {
         locationManager?.stopUpdatingLocation()
         RealmService.shared.deleteAllLocations()
@@ -142,7 +142,6 @@ class MapViewController: UIViewController {
 }
 
 // MARK: - Extensions CLLocationManagerDelegate
-
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
@@ -151,7 +150,7 @@ extension MapViewController: CLLocationManagerDelegate {
         let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 15)
         mapView.animate(to: position)
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
@@ -163,7 +162,6 @@ extension MapViewController: GMSMapViewDelegate {
 }
 
 // MARK: - Configure location
-
 extension MapViewController {
     private func configureLocationManager() {
         locationManager = CLLocationManager()
@@ -173,7 +171,7 @@ extension MapViewController {
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.delegate = self
     }
-    
+
     private func updateCurrentLocation() {
         locationManager?.requestLocation()
         guard let location = locationManager?.location?.coordinate else {
@@ -183,15 +181,15 @@ extension MapViewController {
         updateCamera(location: location)
         createMark(location: location)
     }
-    
+
     private func setupCamera(location: CLLocationCoordinate2D) {
         mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom:10)
     }
-    
+
     private func updateCamera(location: CLLocationCoordinate2D) {
         mapView.animate(toLocation: location)
     }
-    
+
     private func createMark(location: CLLocationCoordinate2D) {
         let marker = GMSMarker(position: location)
         marker.map = mapView
