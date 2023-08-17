@@ -31,6 +31,7 @@
 		BD3ECB8A2A77DF0D00796162 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD3ECB892A77DF0D00796162 /* RealmSwift */; };
 		BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8B2A77DF7800796162 /* MapViewController.swift */; };
 		BD3ECB8E2A77DFB300796162 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */; };
+		BD717AB22A8E7B48004B1784 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717AB12A8E7B48004B1784 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		BD10C9242A7BC0BA0034025F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BD3ECB8B2A77DF7800796162 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		BD717AB12A8E7B48004B1784 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				BD10C91D2A7BBFA60034025F /* LoginView */,
 				BD10C91E2A7BC00A0034025F /* MapView */,
 				BD10C9152A77E2F90034025F /* Realm */,
+				BD717AB02A8E7B21004B1784 /* Services */,
 				BD10C9232A7BC09D0034025F /* Router */,
 				8CEEE1C62A6BDD65003E1BBB /* Main.storyboard */,
 				8CEEE1C92A6BDD66003E1BBB /* Assets.xcassets */,
@@ -191,6 +194,14 @@
 				BD10C9242A7BC0BA0034025F /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		BD717AB02A8E7B21004B1784 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD717AB12A8E7B48004B1784 /* LocationManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 			files = (
 				BD10C9202A7BC02E0034025F /* LoginViewController.swift in Sources */,
 				8CEEE1C12A6BDD65003E1BBB /* AppDelegate.swift in Sources */,
+				BD717AB22A8E7B48004B1784 /* LocationManager.swift in Sources */,
 				BD10C9192A77E3270034025F /* RealmService.swift in Sources */,
 				BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */,
 				BD10C9252A7BC0BA0034025F /* Router.swift in Sources */,
