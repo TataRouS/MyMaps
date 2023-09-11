@@ -33,6 +33,7 @@
 		BD3ECB8E2A77DFB300796162 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */; };
 		BD717B772AA61B95004B1784 /* Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717B762AA61B95004B1784 /* Lesson6.swift */; };
 		BD717B792AA61D89004B1784 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717B782AA61D89004B1784 /* LocationManager.swift */; };
+		BDC3C0B02AAF690F00CF85DB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3C0AF2AAF690F00CF85DB /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BD3ECB8D2A77DFB300796162 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		BD717B762AA61B95004B1784 /* Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson6.swift; sourceTree = "<group>"; };
 		BD717B782AA61D89004B1784 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BDC3C0AF2AAF690F00CF85DB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				BD717B782AA61D89004B1784 /* LocationManager.swift */,
+				BDC3C0AF2AAF690F00CF85DB /* NotificationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				BD717B792AA61D89004B1784 /* LocationManager.swift in Sources */,
 				BD10C9192A77E3270034025F /* RealmService.swift in Sources */,
 				BD3ECB8C2A77DF7800796162 /* MapViewController.swift in Sources */,
+				BDC3C0B02AAF690F00CF85DB /* NotificationManager.swift in Sources */,
 				BD10C9252A7BC0BA0034025F /* Router.swift in Sources */,
 				BD10C9222A7BC07B0034025F /* User.swift in Sources */,
 				BD10C9172A77E30D0034025F /* Location.swift in Sources */,
