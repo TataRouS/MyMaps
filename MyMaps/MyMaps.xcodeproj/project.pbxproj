@@ -34,6 +34,7 @@
 		BD717B772AA61B95004B1784 /* Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717B762AA61B95004B1784 /* Lesson6.swift */; };
 		BD717B792AA61D89004B1784 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717B782AA61D89004B1784 /* LocationManager.swift */; };
 		BDC3C0B02AAF690F00CF85DB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3C0AF2AAF690F00CF85DB /* NotificationManager.swift */; };
+		BDC3C0B32AAF6B1900CF85DB /* UIImageScaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3C0B22AAF6B1900CF85DB /* UIImageScaleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		BD717B762AA61B95004B1784 /* Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson6.swift; sourceTree = "<group>"; };
 		BD717B782AA61D89004B1784 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BDC3C0AF2AAF690F00CF85DB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		BDC3C0B22AAF6B1900CF85DB /* UIImageScaleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageScaleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				8CEEE1CE2A6BDD66003E1BBB /* Info.plist */,
 				8CEEE1C02A6BDD65003E1BBB /* AppDelegate.swift */,
 				8CEEE1C22A6BDD65003E1BBB /* SceneDelegate.swift */,
+				BDC3C0B12AAF6ADE00CF85DB /* Helper */,
 				BD10C91D2A7BBFA60034025F /* LoginView */,
 				BD10C91E2A7BC00A0034025F /* MapView */,
 				BD10C9152A77E2F90034025F /* Realm */,
@@ -180,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				BD10C91F2A7BC02E0034025F /* LoginViewController.swift */,
+				BDC3C0B22AAF6B1900CF85DB /* UIImageScaleExtension.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -208,6 +212,13 @@
 				BDC3C0AF2AAF690F00CF85DB /* NotificationManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BDC3C0B12AAF6ADE00CF85DB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC3C0B32AAF6B1900CF85DB /* UIImageScaleExtension.swift in Sources */,
 				BD10C9202A7BC02E0034025F /* LoginViewController.swift in Sources */,
 				8CEEE1C12A6BDD65003E1BBB /* AppDelegate.swift in Sources */,
 				BD717B772AA61B95004B1784 /* Lesson6.swift in Sources */,
